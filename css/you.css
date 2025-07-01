@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+* {
+    margin:0; padding:0; box-sizing: border-box;
+}
+a {
+    text-decoration: none; color:#333;
+}
+img {
+    max-width:100%;
+}
+#layout {
+    max-width: 1200px; margin: auto; border:1px solid pink;
+    position: relative;
+}
+
+header {
+    height:100px; background:#8c5d28; padding: 0 40px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+}
+header> a {align-self:center;}
+header ul {
+    list-style: none;
+    display: flex;
+}
+header ul a {
+    display: block; color:white;
+}
+header li {
+    position: relative;
+}
+.mainMenu {
+    padding:15px 50px; font-size:1.1rem;; font-weight:bold;
+}
+.mainMenu:hover , header li:hover .mainMenu , .mainMenu:focus {
+    background: #007bdc; 
+}
+.subMenu {
+    background: #007bdc; padding-top:10px;
+    position: absolute; width:100%; z-index: 2;        display: none;
+}
+.subMenu a {
+    padding:7px; text-align: center;
+}
+.subMenu a:hover, .subMenu a:focus {
+    background:#7cc5ff ; color:black;
+}
+header li:nth-child(3) a:last-child:hover, 
+header li:nth-child(3) a:last-child:focus {
+	background:none; color:white;
+}
+#bg {
+    height:150px; background: #007bdc;
+    position: absolute; width:100%; z-index: 1;       display: none;
+}
+
+/* 슬라이드 */
+#slideArea h1 {
+    display: none;
+}
+#fade {
+    position: relative; height:300px; overflow: hidden;
+}
+#fade a {
+    position: absolute; top:0;
+}
+
+/*메인 (공지사항/갤러리/바로가기) */
+main {
+    display:flex; height:200px;
+    padding-top:20px; overflow: hidden;
+}
+main h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0a638;
+}
+#notice {
+    flex:1;
+}
+#notice ol {
+    list-style: none; line-height: 180%;
+}
+#notice li span {
+    float: right;
+}
+
+#gallery {
+    flex:1; margin:0 60px;
+}
+#gallery div {
+    text-align: center;
+}
+#quick {
+    flex:0.6;
+}
+#quick h2 {
+    display: none;
+}
+#quick {
+    text-align: center;
+}
+#quick img {
+    height:100%;
+}
+
+/* 하단 */
+footer {
+    background:#ccc; height:100px; padding:30px;
+    display: flex; align-items: center; justify-content: space-between;
+    line-height: 170%;
+}
+footer a {
+    padding:3px 20px; margin:5px;
+}
+footer a:hover {
+    text-decoration: underline; color:black;
+}
+
+/*팝업*/
+#popup {
+    position: absolute; top:100px; left:calc(( 100% - 600px) / 2 );
+    background: white;
+    width:600px; height:230px; border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+    padding:30px; line-height: 180%;                display:none;
+}
+#popup h3 {
+    padding-bottom:10px;
+}
+#popup button {
+    float:right; padding:3px 6px;
+}
